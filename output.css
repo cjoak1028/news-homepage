@@ -221,6 +221,9 @@
   .w-25 {
     width: calc(var(--spacing) * 25);
   }
+  .w-full {
+    width: 100%;
+  }
   .flex-shrink-0 {
     flex-shrink: 0;
   }
@@ -235,6 +238,9 @@
   }
   .justify-between {
     justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -308,6 +314,12 @@
   .py-\[1\.3438rem\] {
     padding-block: 1.3438rem;
   }
+  .pt-7 {
+    padding-top: calc(var(--spacing) * 7);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
   .font-inter {
     font-family: var(--font-inter);
   }
@@ -380,6 +392,31 @@
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .\*\:max-w-280 {
+    :is(& > *) {
+      max-width: calc(var(--spacing) * 280);
+    }
+  }
+  .md\:bg-\[url\(\.\/assets\/images\/image-web-3-desktop\.jpg\)\] {
+    @media (width >= 48rem) {
+      background-image: url(./assets/images/image-web-3-desktop.jpg);
+    }
+  }
+  .md\:px-20 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:px-\[2\.625rem\] {
+    @media (width >= 48rem) {
+      padding-inline: 2.625rem;
+    }
+  }
+  .md\:py-8 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 8);
+    }
   }
 }
 @font-face {

@@ -26,8 +26,10 @@
       }
     </style> -->
   </head>
-  <body class="font-inter px-4 py-7">
-    <header class="flex justify-between items-center mb-8">
+  <body
+    class="font-inter px-4 md:px-20 pt-7 pb-20 flex flex-col items-center *:max-w-280"
+  >
+    <header class="flex justify-between w-full mb-8">
       <img src="./assets/images/logo.svg" alt="Company logo" class="h-7" />
       <button><img src="./assets/images/icon-menu.svg" /></button>
       <!-- <nav>
@@ -43,23 +45,27 @@
     <main class="grid grid-cols-3 gap-y-16">
       <article class="col-span-full">
         <div
-          class="h-75 bg-[url(./assets/images/image-web-3-mobile.jpg)] bg-center bg-cover mb-6"
+          class="h-75 bg-[url(./assets/images/image-web-3-mobile.jpg)] md:bg-[url(./assets/images/image-web-3-desktop.jpg)] bg-center bg-cover mb-6"
         ></div>
-        <h1 class="text-[2.5rem]/10 font-extrabold mb-6 color-navy-950">
-          The Bright Future of Web 3.0?
-        </h1>
-        <p class="text-[0.9375rem]/6.5 text-navy-600 mb-6">
-          We dive into the next evolution of the web that claims to put the
-          power of the platforms back into the hands of the people. But is it
-          really fulfilling its promise?
-        </p>
-        <a
-          class="inline-flex h-12 px-[2.0625rem] bg-red-500 uppercase text-sm/6 font-bold tracking-[0.2738rem] items-center"
-          >Read More</a
-        >
+        <div class="flex flex-col gap-6">
+          <h1 class="text-[2.5rem]/10 font-extrabold color-navy-950">
+            The Bright Future of Web 3.0?
+          </h1>
+          <div>
+            <p class="text-[0.9375rem]/6.5 text-navy-600 mb-6">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <a
+              class="inline-flex h-12 px-[2.0625rem] bg-red-500 uppercase text-sm/6 font-bold tracking-[0.2738rem] items-center"
+              >Read More</a
+            >
+          </div>
+        </div>
       </article>
       <section
-        class="col-span-full px-[1.281rem] py-[1.344rem] bg-navy-950 text-white"
+        class="col-span-full px-[1.281rem] md:px-[2.625rem] py-[1.344rem] md:py-8 bg-navy-950 text-white"
       >
         <h2 class="text-gold-400 text-[2rem]/8 font-bold mb-8">New</h2>
         <article>
