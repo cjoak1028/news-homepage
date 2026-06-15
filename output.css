@@ -11,6 +11,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
+    --text-lg: 1.125rem;
     --text-xl: 1.25rem;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
@@ -214,8 +215,20 @@
   .h-75 {
     height: calc(var(--spacing) * 75);
   }
+  .min-h-\[7\.9375rem\] {
+    min-height: 7.9375rem;
+  }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
+  }
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -223,8 +236,17 @@
   .justify-between {
     justify-content: space-between;
   }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-y-16 {
     row-gap: calc(var(--spacing) * 16);
+  }
+  .self-center {
+    align-self: center;
   }
   .border-navy-600 {
     border-color: var(--color-navy-600);
@@ -237,6 +259,15 @@
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
+  }
+  .bg-\[url\(\.\/assets\/images\/image-gaming-growth\.jpg\)\] {
+    background-image: url(./assets/images/image-gaming-growth.jpg);
+  }
+  .bg-\[url\(\.\/assets\/images\/image-retro-pcs\.jpg\)\] {
+    background-image: url(./assets/images/image-retro-pcs.jpg);
+  }
+  .bg-\[url\(\.\/assets\/images\/image-top-laptops\.jpg\)\] {
+    background-image: url(./assets/images/image-top-laptops.jpg);
   }
   .bg-\[url\(\.\/assets\/images\/image-web-3-mobile\.jpg\)\] {
     background-image: url(./assets/images/image-web-3-mobile.jpg);
@@ -292,6 +323,10 @@
     font-size: 2rem;
     line-height: calc(var(--spacing) * 8);
   }
+  .text-lg\/6 {
+    font-size: var(--text-lg);
+    line-height: calc(var(--spacing) * 6);
+  }
   .text-sm\/6 {
     font-size: var(--text-sm);
     line-height: calc(var(--spacing) * 6);
@@ -302,6 +337,12 @@
   }
   .text-\[0\.9375rem\] {
     font-size: 0.9375rem;
+  }
+  .text-\[2rem\] {
+    font-size: 2rem;
+  }
+  .text-\[8rem\] {
+    font-size: 8rem;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -323,6 +364,12 @@
   }
   .text-navy-600 {
     color: var(--color-navy-600);
+  }
+  .text-navy-950 {
+    color: var(--color-navy-950);
+  }
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-white {
     color: var(--color-white);
