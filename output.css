@@ -8,15 +8,19 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-red-500: #f15d51;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
-    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-xl: 1.25rem;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-inter: "Inter", sans-serif;
+    --color-navy-950: #00001a;
     --color-navy-600: #5e607a;
+    --color-gold-400: #e9aa52;
+    --color-grey-300: #c5c6ce;
   }
 }
 @layer base {
@@ -174,6 +178,12 @@
   .col-span-full {
     grid-column: 1 / -1;
   }
+  .my-8 {
+    margin-block: calc(var(--spacing) * 8);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
   }
@@ -189,20 +199,20 @@
   .grid {
     display: grid;
   }
+  .inline-flex {
+    display: inline-flex;
+  }
   .table {
     display: table;
   }
   .h-7 {
     height: calc(var(--spacing) * 7);
   }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
+  .h-12 {
+    height: calc(var(--spacing) * 12);
   }
   .h-75 {
     height: calc(var(--spacing) * 75);
-  }
-  .w-full {
-    width: 100%;
   }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -213,11 +223,17 @@
   .justify-between {
     justify-content: space-between;
   }
-  .gap-16 {
-    gap: calc(var(--spacing) * 16);
-  }
   .gap-y-16 {
     row-gap: calc(var(--spacing) * 16);
+  }
+  .border-navy-600 {
+    border-color: var(--color-navy-600);
+  }
+  .bg-navy-600 {
+    background-color: var(--color-navy-600);
+  }
+  .bg-navy-950 {
+    background-color: var(--color-navy-950);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -231,8 +247,20 @@
   .bg-center {
     background-position: center;
   }
+  .stroke-\[\#979797\] {
+    stroke: #979797;
+  }
+  .stroke-navy-600 {
+    stroke: var(--color-navy-600);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-\[1\.281rem\] {
+    padding-inline: 1.281rem;
   }
   .px-\[2\.0625rem\] {
     padding-inline: 2.0625rem;
@@ -243,38 +271,37 @@
   .py-7 {
     padding-block: calc(var(--spacing) * 7);
   }
+  .py-\[1\.344rem\] {
+    padding-block: 1.344rem;
+  }
+  .py-\[1\.3438rem\] {
+    padding-block: 1.3438rem;
+  }
   .font-inter {
     font-family: var(--font-inter);
-  }
-  .text-\[0\.9375rem\]\/6 {
-    font-size: 0.9375rem;
-    line-height: calc(var(--spacing) * 6);
   }
   .text-\[0\.9375rem\]\/6\.5 {
     font-size: 0.9375rem;
     line-height: calc(var(--spacing) * 6.5);
   }
-  .text-\[0\.9375rem\]\/10 {
-    font-size: 0.9375rem;
-    line-height: calc(var(--spacing) * 10);
-  }
   .text-\[2\.5rem\]\/10 {
     font-size: 2.5rem;
     line-height: calc(var(--spacing) * 10);
   }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
+  .text-\[2rem\]\/8 {
+    font-size: 2rem;
+    line-height: calc(var(--spacing) * 8);
   }
   .text-sm\/6 {
     font-size: var(--text-sm);
     line-height: calc(var(--spacing) * 6);
   }
-  .text-\[2\.5rem\] {
-    font-size: 2.5rem;
+  .text-xl\/6 {
+    font-size: var(--text-xl);
+    line-height: calc(var(--spacing) * 6);
   }
-  .text-\[10rem\] {
-    font-size: 10rem;
+  .text-\[0\.9375rem\] {
+    font-size: 0.9375rem;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -288,8 +315,17 @@
     --tw-tracking: 0.2738rem;
     letter-spacing: 0.2738rem;
   }
+  .text-gold-400 {
+    color: var(--color-gold-400);
+  }
+  .text-grey-300 {
+    color: var(--color-grey-300);
+  }
   .text-navy-600 {
     color: var(--color-navy-600);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
