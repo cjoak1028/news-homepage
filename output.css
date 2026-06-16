@@ -298,6 +298,9 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -498,6 +501,65 @@
   .\*\:max-w-280 {
     :is(& > *) {
       max-width: calc(var(--spacing) * 280);
+    }
+  }
+  .\*\:cursor-pointer {
+    :is(& > *) {
+      cursor: pointer;
+    }
+  }
+  .group-hover\:text-gold-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-gold-400);
+      }
+    }
+  }
+  .group-hover\:text-red-500 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-red-500);
+      }
+    }
+  }
+  .hover\:bg-navy-950 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-navy-950);
+      }
+    }
+  }
+  .hover\:text-red-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red-500);
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .\*\:hover\:text-red-500 {
+    :is(& > *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-red-500);
+        }
+      }
+    }
+  }
+  .md\:ml-8 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:w-\[19\.5rem\] {
+    @media (width >= 48rem) {
+      width: 19.5rem;
     }
   }
   .md\:bg-\[url\(\.\/assets\/images\/image-web-3-desktop\.jpg\)\] {
