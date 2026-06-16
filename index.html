@@ -12,6 +12,8 @@
       href="./assets/images/favicon-32x32.png"
     />
     <link href="./output.css" rel="stylesheet" />
+  
+    <script src="./script.js" defer></script>
 
     <title>Frontend Mentor | News homepage</title>
 
@@ -36,15 +38,15 @@
           alt="Company logo"
           class="h-7 lg:h-10"
         />
-        <button class="lg:hidden">
+        <button class="lg:hidden cursor-pointer" onclick="toggleMenu()">
           <img src="./assets/images/icon-menu.svg" alt="Menu open button" />
         </button>
-        <div class="hidden fixed h-screen w-screen bg-navy-950/50 left-0 top-0">
+        <div id="hamburger-menu" class="hidden lg:hidden fixed h-screen w-screen bg-navy-950/50 left-0 top-0">
           <div
             class="bg-white h-full w-3xs md:w-[19.5rem] absolute right-0 pr-4 md:pr-20 pt-7"
           >
             <header class="flex justify-end mb-22">
-              <button class="w-[1.875rem]">
+              <button class="w-[1.875rem] cursor-pointer" onclick="toggleMenu()">
                 <img
                   src="./assets/images/icon-menu-close.svg"
                   alt="Menu close button"
